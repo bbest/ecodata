@@ -113,9 +113,10 @@ StatGLS <- ggplot2::ggproto("StatGLS",
                      #   model <- linear_ar1
                      # }
 
-                     best_lm <- ts_gls(data)
+                     model <- ts_gls(data)
 
-                     if (best_lm$pval < 0.05){
+
+                     if (anova(model)$`p-value`[2] < 0.05){
 
                        newtime <- seq(min(data$x), max(data$x), length.out=length(data$x))
                        newdata <- data.frame(x = newtime,
