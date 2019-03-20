@@ -23,9 +23,9 @@
 #'summary(ts_gls(data = data))
 ts_gls <- function(data, ...) {
 
-  if(!all(names(data) %in% c("x", "y"))){
-    stop("Currently, the 'ts_gls' function is only for a response (y) and time term (x).")
-  }
+  # if(!all(names(data) %in% c("x", "y"))){
+  #   stop("Currently, the 'ts_gls' function is only for a response (y) and time term (x).")
+  # }
 
   if(nrow(data) < 30){
     message("N < 30")
