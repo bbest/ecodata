@@ -1,7 +1,9 @@
 # Process ocean temperature anomaly data
 
-# These data include in situ regional time series of both surface and bottom water temperature anomalies
-# on the Northeast Continental Shelf. Raw data is split into four files by EPU (SS, GOM, GB, and MAB).
+# These data include in situ regional time series of both surface and 
+# bottom water temperature anomalies
+# on the Northeast Continental Shelf. Raw data is split into four 
+# files by EPU (SS, GOM, GB, and MAB).
 
 
 library(dplyr)
@@ -20,7 +22,8 @@ get_oceantemp_insitu <- function(save_clean = F){
   
   oceantemp_insitu <- rbind(ss, gom, gb, mab) %>% #bind all
     dplyr::rename(Time = decimal.year, Var = variable.name, Value = temperature) %>% #rename
-    mutate(Units = "degreesC", Time = as.Date(format(date_decimal(Time), "%Y-%b-%d"), "%Y-%b-%d"),
+    mutate(Units = "degreesC", 
+           Time = as.Date(format(date_decimal(Time), "%Y-%b-%d"), "%Y-%b-%d"),
            Var, Var = plyr::mapvalues(Var, from = c("Tsfc_anom",#Rename variables
                                                     "Tsfc_ref",
                                                     "Tbot_anom",
