@@ -1,1 +1,1 @@
-test 7 after closed pull request
+test 8 after setting bbest@github_pat
