@@ -17,7 +17,7 @@ Time,Var,Value
 2002.6516,Tsfc_anom,1.8357
 2002.7687,Tsfc_anom,1.1128
 2003.6477,Tsfc_anom,-0.3152
-2003.7577,Tsfc_anom,0.0104
+2003.7577000000001,Tsfc_anom,0.0104
 2003.8554,Tsfc_anom,0.6658
 2004.2584,Tsfc_anom,-1.0267
 2004.421,Tsfc_anom,-1.2521
@@ -293,7 +293,7 @@ Time,Var,Value
 2014.541,Tsfc_anom,-0.107
 2015.4309,Tsfc_anom,0.8696
 2016.4527,Tsfc_anom,1.6358
-2017.4391,Tsfc_anom,0.0007
+2017.4391,Tsfc_anom,7e-4
 2018.4211,Tsfc_anom,0.1427
 2019.4217,Tsfc_anom,0.3849
 1995.3635,Tsfc_anom,-0.4969
@@ -317,7 +317,7 @@ Time,Var,Value
 2002.6516,Tsfc_ref,10.3764
 2002.7687,Tsfc_ref,10.3764
 2003.6477,Tsfc_ref,10.3764
-2003.7577,Tsfc_ref,10.3764
+2003.7577000000001,Tsfc_ref,10.3764
 2003.8554,Tsfc_ref,10.3764
 2004.2584,Tsfc_ref,10.3764
 2004.421,Tsfc_ref,10.3764
@@ -617,7 +617,7 @@ Time,Var,Value
 2002.652,Tbot_anom,0.3414
 2002.769,Tbot_anom,0.8797
 2003.6477,Tbot_anom,-1.9344
-2003.7577,Tbot_anom,-0.8778
+2003.7577000000001,Tbot_anom,-0.8778
 2003.8553,Tbot_anom,0.39
 2004.2584,Tbot_anom,-0.9505
 2004.421,Tbot_anom,-1.0149
@@ -913,7 +913,7 @@ Time,Var,Value
 2002.652,Tbot_ref,9.1671
 2002.769,Tbot_ref,9.1671
 2003.6477,Tbot_ref,9.1671
-2003.7577,Tbot_ref,9.1671
+2003.7577000000001,Tbot_ref,9.1671
 2003.8553,Tbot_ref,9.1671
 2004.2584,Tbot_ref,9.1671
 2004.421,Tbot_ref,9.1671
@@ -1191,3 +1191,4 @@ Time,Var,Value
 1995.3635,Tbot_ref,9.1671
 1980.1762,Tbot_ref,9.1671
 1977.61,Tbot_ref,9.1671
+2050,Tbot_ref,10

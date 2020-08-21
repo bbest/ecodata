@@ -477,7 +477,7 @@ Time,Var,Value
 1980.494,Tbot_anom,-0.8619
 1980.599,Tbot_anom,-0.8634
 2013.6711,Tbot_anom,0.8876
-2013.4529,Tbot_anom,0.6124
+2013.4529,Tbot_anom,0.61240000000000006
 2013.8947,Tbot_anom,0.9614
 2014.1814,Tbot_anom,-0.3556
 2016.4396,Tbot_anom,0.9011
@@ -685,3 +685,5 @@ Time,Var,Value
 1996.427,Tbot_ref,6.9851
 1980.1555,Tbot_ref,6.9851
 1977.6063,Tbot_ref,6.9851
+2030,Tbot_ref,9.99
+2030,Tbot_ref,9.99
