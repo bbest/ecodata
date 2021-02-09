@@ -25,6 +25,7 @@ load_all(here())
 
 ds_ls <- data(package = "ecodata") %>% .$results %>% .[,3]
 not_null <- function(x) !is.null(x)
+browser()
 datasets <- tibble(
   name = ds_ls) %>% 
   mutate(

@@ -1642,7 +1642,9 @@ load_all(here())
 
 ds_ls &lt;- data(package = &quot;ecodata&quot;) %&gt;% .$results %&gt;% .[,3]
 not_null &lt;- function(x) !is.null(x)
-datasets &lt;- tibble(
+browser()</code></pre>
+<pre><code>## Called from: eval(expr, envir, enclos)</code></pre>
+<pre class="r"><code>datasets &lt;- tibble(
   name = ds_ls) %&gt;% 
   mutate(
     data = map(name, function(name){
