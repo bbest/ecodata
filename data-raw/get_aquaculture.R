@@ -15,17 +15,17 @@ get_aquaculture <- function(save_clean = F){
     dplyr::rename(Time = Year,
                   Region = State)
 
-
-  if (save_clean){
-    usethis::use_data(aquaculture, overwrite = T)
-  } else {
-    return(aquaculture)
-  }
   # metadata ----
   attr(aquaculture, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/aquaculture.html"
   attr(aquaculture, "data_files")   <- list(
     aquaculture_xlsx = aquaculture_xlsx)
   attr(aquaculture, "data_steward") <- c(
     "Chris Schillaci <christopher.shillaci@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(aquaculture, overwrite = T)
+  } else {
+    return(aquaculture)
+  }
 }
 get_aquaculture(save_clean = T)
