@@ -82,11 +82,6 @@ get_zoo_strat_abun <- function(save_clean = F){
                   EPU = Region) %>%
     gather(Var, Value, SmallCalanoida:Cnidaria)
 
-  if (save_clean){
-    usethis::use_data(zoo_strat_abun, overwrite = T)
-  } else {
-    return(zoo_strat_abun)
-  }
   # metadata ----
   attr(zoo_strat_abun, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/chl-pp.html"
   attr(zoo_strat_abun, "data_files")   <- list(
@@ -95,6 +90,13 @@ get_zoo_strat_abun <- function(save_clean = F){
     "Harvey Walsh <harvey.walsh@noaa.gov>",
     "Mike Jones <michael.jones@noaa.gov>",
     "Ryan Morse <ryan.morse@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(zoo_strat_abun, overwrite = T)
+  } else {
+    return(zoo_strat_abun)
+  }
+
 }
 get_zoo_strat_abun(save_clean = T)
 

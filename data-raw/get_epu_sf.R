@@ -20,8 +20,13 @@ get_epu_sf <- function(save_clean){
   crs(epu_shp) <- crs
   epu_sf <- as(epu_shp, "sf")
 
+  # metadata ----
+  attr(epu_sf, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/epu.html"
+  attr(epu_sf, "data_files")   <- list() #epu_shp = epu_shp)
+  attr(epu_sf, "data_steward") <- c()
+
   if (save_clean){
-    usethis::use_data(epu_sf)
+    usethis::use_data(epu_sf, overwrite = T)
   } else {
     return(epu_sf)
   }

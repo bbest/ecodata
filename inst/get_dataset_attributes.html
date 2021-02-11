@@ -1896,21 +1896,35 @@ dataset_datafiles &lt;- datasets %&gt;%
 <td align="left">TRUE</td>
 </tr>
 <tr class="even">
-<td align="left">mab_inshore_survey</td>
+<td align="left">long_term_sst</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
 <tr class="odd">
-<td align="left">mass_inshore_survey</td>
+<td align="left">mab_inshore_survey</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
 <tr class="even">
+<td align="left">mass_inshore_survey</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+</tr>
+<tr class="odd">
 <td align="left">narw</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+</tr>
+<tr class="even">
+<td align="left">ne_inshore_survey_species</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
@@ -1966,98 +1980,112 @@ dataset_datafiles &lt;- datasets %&gt;%
 <td align="left">TRUE</td>
 </tr>
 <tr class="even">
+<td align="left">recdat</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+</tr>
+<tr class="odd">
 <td align="left">seabird_ne</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">seasonal_oisst_anom</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">seasonal_sst_anomaly_gridded</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">slopewater</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">species_dist</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">stock_status</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">stom_fullness</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">wcr</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">wind_dev_speed</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">wind_occupancy</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">wind_revenue</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">zoo_abund</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">zoo_diversity</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">zoo_sli_anom</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="left">zoo_strat_abun</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
 <td align="left">TRUE</td>
@@ -2098,7 +2126,7 @@ dataset_datafiles &lt;- datasets %&gt;%
 <td align="left">epu_sf</td>
 <td align="left">TRUE</td>
 <td align="left">FALSE</td>
-<td align="left">FALSE</td>
+<td align="left">TRUE</td>
 <td align="left">FALSE</td>
 </tr>
 <tr class="even">
@@ -2123,25 +2151,11 @@ dataset_datafiles &lt;- datasets %&gt;%
 <td align="left">FALSE</td>
 </tr>
 <tr class="odd">
-<td align="left">long_term_sst</td>
-<td align="left">TRUE</td>
-<td align="left">FALSE</td>
-<td align="left">FALSE</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
 <td align="left">nao</td>
 <td align="left">TRUE</td>
 <td align="left">FALSE</td>
-<td align="left">FALSE</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="left">ne_inshore_survey_species</td>
 <td align="left">TRUE</td>
-<td align="left">FALSE</td>
-<td align="left">FALSE</td>
-<td align="left">FALSE</td>
+<td align="left">TRUE</td>
 </tr>
 <tr class="even">
 <td align="left">ne_wind</td>
@@ -2165,42 +2179,28 @@ dataset_datafiles &lt;- datasets %&gt;%
 <td align="left">FALSE</td>
 </tr>
 <tr class="odd">
-<td align="left">recdat</td>
-<td align="left">TRUE</td>
-<td align="left">TRUE</td>
-<td align="left">TRUE</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
 <td align="left">seabird_MAB</td>
 <td align="left">FALSE</td>
 <td align="left">FALSE</td>
 <td align="left">FALSE</td>
 <td align="left">FALSE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">species_groupings</td>
 <td align="left">TRUE</td>
 <td align="left">FALSE</td>
 <td align="left">FALSE</td>
 <td align="left">FALSE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">stratification</td>
 <td align="left">TRUE</td>
 <td align="left">FALSE</td>
 <td align="left">FALSE</td>
 <td align="left">FALSE</td>
 </tr>
-<tr class="odd">
-<td align="left">zoo_oi</td>
-<td align="left">TRUE</td>
-<td align="left">FALSE</td>
-<td align="left">FALSE</td>
-<td align="left">FALSE</td>
-</tr>
 <tr class="even">
-<td align="left">zoo_strat_abun</td>
+<td align="left">zoo_oi</td>
 <td align="left">TRUE</td>
 <td align="left">FALSE</td>
 <td align="left">FALSE</td>
@@ -2344,16 +2344,24 @@ dataset_datafiles &lt;- datasets %&gt;%
 <td align="left">Harvey Walsh <a href="mailto:harvey.walsh@noaa.gov" class="email">harvey.walsh@noaa.gov</a></td>
 </tr>
 <tr class="odd">
+<td align="left">long_term_sst</td>
+<td align="left">Kevin Friedland <a href="mailto:kevin.friedland@noaa.gov" class="email">kevin.friedland@noaa.gov</a></td>
+</tr>
+<tr class="even">
 <td align="left">mab_inshore_survey</td>
 <td align="left">James Gartland <a href="mailto:jgartlan@vim.edu" class="email">jgartlan@vim.edu</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">mass_inshore_survey</td>
 <td align="left">Sean Lucey <a href="mailto:sean.lucey@noaa.gov" class="email">sean.lucey@noaa.gov</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">narw</td>
 <td align="left">Chris Orphanides <a href="mailto:chris.orphanides@noaa.gov" class="email">chris.orphanides@noaa.gov</a></td>
+</tr>
+<tr class="odd">
+<td align="left">ne_inshore_survey_species</td>
+<td align="left">Rebecca Peters <a href="mailto:rebecca.j.peters@maine.gov" class="email">rebecca.j.peters@maine.gov</a></td>
 </tr>
 <tr class="even">
 <td align="left">ne_inshore_survey</td>
@@ -2467,6 +2475,18 @@ dataset_datafiles &lt;- datasets %&gt;%
 <td align="left">zoo_sli_anom</td>
 <td align="left">Ryan Morse <a href="mailto:ryan.morse@noaa.gov" class="email">ryan.morse@noaa.gov</a></td>
 </tr>
+<tr class="even">
+<td align="left">zoo_strat_abun</td>
+<td align="left">Harvey Walsh <a href="mailto:harvey.walsh@noaa.gov" class="email">harvey.walsh@noaa.gov</a></td>
+</tr>
+<tr class="odd">
+<td align="left">zoo_strat_abun</td>
+<td align="left">Mike Jones <a href="mailto:michael.jones@noaa.gov" class="email">michael.jones@noaa.gov</a></td>
+</tr>
+<tr class="even">
+<td align="left">zoo_strat_abun</td>
+<td align="left">Ryan Morse <a href="mailto:ryan.morse@noaa.gov" class="email">ryan.morse@noaa.gov</a></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -2546,52 +2566,60 @@ dataset_datafiles &lt;- datasets %&gt;%
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/community-engagement.html" class="uri">https://noaa-edab.github.io/tech-doc/community-engagement.html</a></td>
 </tr>
 <tr class="even">
+<td align="left">epu_sf</td>
+<td align="left"><a href="https://noaa-edab.github.io/tech-doc/epu.html" class="uri">https://noaa-edab.github.io/tech-doc/epu.html</a></td>
+</tr>
+<tr class="odd">
 <td align="left">forage_anomaly</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc.html" class="uri">https://noaa-edab.github.io/tech-doc.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">grayseal</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/harbor-porpoise-bycatch.html" class="uri">https://noaa-edab.github.io/tech-doc/harbor-porpoise-bycatch.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">gsi_old</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/gulf-stream-index.html" class="uri">https://noaa-edab.github.io/tech-doc/gulf-stream-index.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">gsi</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/gulf-stream-index.html" class="uri">https://noaa-edab.github.io/tech-doc/gulf-stream-index.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">habitat_occupancy</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/hab-occu.html" class="uri">https://noaa-edab.github.io/tech-doc/hab-occu.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">habitat_vulnerability</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/marine-heatwave.html" class="uri">https://noaa-edab.github.io/tech-doc/marine-heatwave.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">harborporpoise</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/harbor-porpoise-bycatch.html" class="uri">https://noaa-edab.github.io/tech-doc/harbor-porpoise-bycatch.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">heatwave</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/marine-heatwave.html" class="uri">https://noaa-edab.github.io/tech-doc/marine-heatwave.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">hms_cpue</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc.html" class="uri">https://noaa-edab.github.io/tech-doc.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">hms_landings</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/highly-migratory-species-landings.html" class="uri">https://noaa-edab.github.io/tech-doc/highly-migratory-species-landings.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">hp_density</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/harbor-porpoise-bycatch.html" class="uri">https://noaa-edab.github.io/tech-doc/harbor-porpoise-bycatch.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">ichthyo_diversity</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/ichthyoplankton-diversity.html" class="uri">https://noaa-edab.github.io/tech-doc/ichthyoplankton-diversity.html</a></td>
+</tr>
+<tr class="odd">
+<td align="left">long_term_sst</td>
+<td align="left"><a href="https://noaa-edab.github.io/tech-doc/long-term-sea-surface-temperature.html" class="uri">https://noaa-edab.github.io/tech-doc/long-term-sea-surface-temperature.html</a></td>
 </tr>
 <tr class="even">
 <td align="left">mab_inshore_survey</td>
@@ -2602,8 +2630,16 @@ dataset_datafiles &lt;- datasets %&gt;%
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/inshoresurvdat.html" class="uri">https://noaa-edab.github.io/tech-doc/inshoresurvdat.html</a></td>
 </tr>
 <tr class="even">
+<td align="left">nao</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
 <td align="left">narw</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/right-whale-abundance.html" class="uri">https://noaa-edab.github.io/tech-doc/right-whale-abundance.html</a></td>
+</tr>
+<tr class="even">
+<td align="left">ne_inshore_survey_species</td>
+<td align="left"><a href="https://noaa-edab.github.io/tech-doc/inshoresurvdat.html" class="uri">https://noaa-edab.github.io/tech-doc/inshoresurvdat.html</a></td>
 </tr>
 <tr class="odd">
 <td align="left">ne_inshore_survey</td>
@@ -2692,6 +2728,10 @@ dataset_datafiles &lt;- datasets %&gt;%
 <tr class="even">
 <td align="left">zoo_sli_anom</td>
 <td align="left"><a href="https://noaa-edab.github.io/tech-doc/zooabund.html" class="uri">https://noaa-edab.github.io/tech-doc/zooabund.html</a></td>
+</tr>
+<tr class="odd">
+<td align="left">zoo_strat_abun</td>
+<td align="left"><a href="https://noaa-edab.github.io/tech-doc/chl-pp.html" class="uri">https://noaa-edab.github.io/tech-doc/chl-pp.html</a></td>
 </tr>
 </tbody>
 </table>
@@ -2848,52 +2888,76 @@ dataset_datafiles &lt;- datasets %&gt;%
 <td align="left">NEFSCIchthyoplankton_v3_7_v2019.xlsx</td>
 </tr>
 <tr class="odd">
+<td align="left">long_term_sst</td>
+<td align="left">ersst annual mean.csv</td>
+</tr>
+<tr class="even">
 <td align="left">mab_inshore_survey</td>
 <td align="left">NEAMAP_SOE INDICES_2019_final.xlsx</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">mass_inshore_survey</td>
 <td align="left">Aggregate_Mass_Survey_biomass_20.Rdata</td>
+</tr>
+<tr class="even">
+<td align="left">nao</td>
+<td align="left">NAO_index.csv</td>
 </tr>
 <tr class="odd">
 <td align="left">narw</td>
 <td align="left">RW Abundance &amp; Calves -for2021 report.xlsx</td>
 </tr>
 <tr class="even">
+<td align="left">ne_inshore_survey_species</td>
+<td align="left">MENH_TrawlSpeciesinSOE2020.xlsx</td>
+</tr>
+<tr class="odd">
 <td align="left">ne_inshore_survey</td>
 <td align="left">MENH_TrawlSurvey_SOE_Data.csv</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">nefsc_survey</td>
 <td align="left">Survdat.RData</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">observed_sharks</td>
 <td align="left">Observed_Sharks_SOE2020 - Debra Duarte - NOAA Federal.csv</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">phyto_size</td>
 <td align="left">1998_2020-OCCCI-PHYSIZE-STATS-NES_EPU_NOESTUARIES-V2021-SOE_FORMAT.csv</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">ppr</td>
 <td align="left">PPR_2020.rds</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">productivity_anomaly</td>
 <td align="left">dat_spec_rec_forSOE.Rdata</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">productivity_anomaly</td>
 <td align="left">dat_spec_rec_epu_forSOE.Rdata</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">rec_hms</td>
 <td align="left">mrip_estim_catch_year_1981_2020.csv</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">rec_hms</td>
 <td align="left">hms_sp_category.csv</td>
+</tr>
+<tr class="even">
+<td align="left">recdat</td>
+<td align="left">Rec_angler_effort_2020.csv</td>
+</tr>
+<tr class="odd">
+<td align="left">recdat</td>
+<td align="left">REC_HARVEST_2020.csv</td>
+</tr>
+<tr class="even">
+<td align="left">recdat</td>
+<td align="left">Rec_Species_Diversity_2020.csv</td>
 </tr>
 <tr class="odd">
 <td align="left">seabird_ne</td>
@@ -2958,6 +3022,10 @@ dataset_datafiles &lt;- datasets %&gt;%
 <tr class="even">
 <td align="left">zoo_sli_anom</td>
 <td align="left">zoo_sli_anom.Rdata</td>
+</tr>
+<tr class="odd">
+<td align="left">zoo_strat_abun</td>
+<td align="left">NEFSCZooplankton_v3_7_v2019.xlsx</td>
 </tr>
 </tbody>
 </table>

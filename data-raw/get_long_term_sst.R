@@ -12,6 +12,12 @@ get_long_term_sst <- function(save_clean = F){
     dplyr::mutate(Var = "long-term sst",
            EPU = "All",
            Units = "degreesC")
+  # metadata ----
+  attr(long_term_sst, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/long-term-sea-surface-temperature.html"
+  attr(long_term_sst, "data_files")   <- list(
+    long_term_sst_csv = "ersst annual mean.csv")
+  attr(long_term_sst, "data_steward") <- c(
+    "Kevin Friedland <kevin.friedland@noaa.gov>")
 
   if (save_clean) {
     usethis::use_data(long_term_sst, overwrite = T)
