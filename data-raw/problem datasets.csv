@@ -2,9 +2,9 @@ Problem Dataset, Problem
 coast, Can't find attribute information
 cold_pool_sf, Attributes should be contained within get_cold_pool.R (but aren't) - unclear if the attributes should be the same as cold_pool or something different. If different not indicated what they should be
 epu_sf, No data steward listed anywhere.
-heatwave_anom_gridded, Couldn't generate dataset. Some of the input files are too big to live on github and have to be pulled from a noaa server. I can't find one of those input files "sst.day.mean.ltm.1982-2010.nc" on the noaa server
-heatwave_peak_date, Couldn't generate dataset. Same problem as heatwave_anom_gridded. Found in "get_seasonal_oisst_anom_gridded.R"
-heatwave_year, Couldn't generate dataset. In "get_heatwave.R": problem in line 130. The data frames to be row bound don't all have the same columns (some contain "day of year" some don't). Unsure if "day of year" should be added to  all data frames or deleted from all data frames.
+heatwave_anom_gridded, Couldn't generate dataset. Some of the input files are too big to live on github and have to be pulled from a noaa server. I can't find one of those input files (sst.day.mean.ltm.1982-2010.nc) on the noaa server
+heatwave_peak_date, Couldn't generate dataset. Same problem as heatwave_anom_gridded. Found in get_seasonal_oisst_anom_gridded.R
+heatwave_year, Couldn't generate dataset. In get_heatwave.R: problem in line 130. The data frames to be row bound don't all have the same columns (some contain "day of year" some don't). Unsure if "day of year" should be added to  all data frames or deleted from all data frames.
 nao, Can't find attribute information
 ne_wind, Can't find attribute information
 nefsc_survey_disaggregated, No attribute information. Just use the attribute info for nefsc_survey?
