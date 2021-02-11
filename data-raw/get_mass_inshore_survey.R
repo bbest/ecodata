@@ -12,16 +12,18 @@ get_mass_survey <- function(save_clean){
   mass_inshore_survey <- mass.survey %>%
     dplyr::mutate(EPU = c("GB"))
 
-  if (save_clean){
-    usethis::use_data(mass_inshore_survey, overwrite = T)
-  } else {
-    return(mass_inshore_survey)
-  }
   # metadata ----
   attr(mass_inshore_survey, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/inshoresurvdat.html"
   attr(mass_inshore_survey, "data_files")   <- list(
     mass_inshore_survey_rdata = mass_inshore_survey_rdata)
   attr(mass_inshore_survey, "data_steward") <- c(
     "Sean Lucey <sean.lucey@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(mass_inshore_survey, overwrite = T)
+  } else {
+    return(mass_inshore_survey)
+  }
+
 }
 get_mass_survey(save_clean = T)

@@ -13,6 +13,12 @@ get_hms_landings <- function(save_clean = F){
   hms_landings<-hms_landings %>%
     tidyr::unite(Var, HMS_Groups, Var, sep = "_")
 
+  # metadata ----
+  attr(hms_landings, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/highly-migratory-species-landings.html"
+  attr(hms_landings, "data_files")   <- list(
+    hms_landings_xlsx = hms_landings_xlsx)
+  attr(hms_landings, "data_steward") <- c(
+    "Carrie Solatnoff <carrie.solatnoff@noaa.gov>")
 
   if (save_clean){
     usethis::use_data(hms_landings, overwrite = T)
@@ -20,11 +26,5 @@ get_hms_landings <- function(save_clean = F){
     return(hms_landings)
   }
 
-  # metadata ----
-  attr(hms_landings, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/highly-migratory-species-landings.html"
-  attr(hms_landings, "data_files")   <- list(
-    hms_landings_xlsx = hms_landings_xlsx)
-  attr(hms_landings, "data_steward") <- c(
-    "Carrie Solatnoff <carrie.solatnoff@noaa.gov>")
 }
 get_hms_landings(save_clean = T)

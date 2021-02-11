@@ -55,11 +55,6 @@ get_heatwave <- function(save_clean = F){
   dplyr:: mutate(Units = "degrees C",
             Time = as.numeric(Time))
 
-  if (save_clean){
-    usethis::use_data(heatwave, overwrite = T)
-  } else {
-    return(heatwave)
-  }
   # metadata ----
   attr(heatwave, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/marine-heatwave.html"
   attr(heatwave, "data_files")   <- list(
@@ -68,16 +63,15 @@ get_heatwave <- function(save_clean = F){
     heatwave_mab_csv = heatwave_mab_csv)
   attr(heatwave, "data_steward") <- c(
     "Vincent Saba <vincent.saba@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(heatwave, overwrite = T)
+  } else {
+    return(heatwave)
+  }
+
 }
 get_heatwave(save_clean = T)
-
-
-
-
-
-
-
-
 
 #### get_heatwave_year get single year of heatwave
 get_heatwave_year <- function(save_clean = F){

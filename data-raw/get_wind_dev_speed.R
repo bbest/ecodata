@@ -17,16 +17,18 @@ get_wind_dev_speed <- function(save_clean = F){
     dplyr::select(Project_Name, Time, Cumulative_seafloor_disturbance, Cumulative_area, Cumulative_foundations) %>%
     tidyr::pivot_longer(cols = starts_with("Cumulative"),  names_to = "Var", values_to = "Value")
 
-  if (save_clean){
-    usethis::use_data(wind_dev_speed, overwrite = T)
-  } else {
-    return(wind_dev_speed)
-  }
   # metadata ----
   attr(wind_dev_speed, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc.html"
   attr(wind_dev_speed, "data_files")   <- list(
     wind_dev_speed_xlsx = wind_dev_speed_xlsx)
   attr(wind_dev_speed, "data_steward") <- c(
     "Angela Silva <angela.silva@noaa.gov")
+
+  if (save_clean){
+    usethis::use_data(wind_dev_speed, overwrite = T)
+  } else {
+    return(wind_dev_speed)
+  }
+
 }
 get_wind_dev_speed(save_clean = T)

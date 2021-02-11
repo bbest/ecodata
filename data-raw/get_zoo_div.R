@@ -14,11 +14,6 @@ get_zoo_diversity <- function(save_clean = F){
                   EPU = Region) %>%
     mutate(Value  = as.numeric(Value))
 
-  if (save_clean){
-    usethis::use_data(zoo_diversity, overwrite = T)
-  } else {
-    return(zoo_diversity)
-  }
   # metadata ----
   attr(zoo_diversity, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/zooabund.html"
   attr(zoo_diversity, "data_files")   <- list(
@@ -27,6 +22,13 @@ get_zoo_diversity <- function(save_clean = F){
     "Harvey Walsh <harvey.walsh@noaa.gov>",
     "Mike Jones <michael.jones@noaa.gov>",
     "Ryan Morse <ryan.morse@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(zoo_diversity, overwrite = T)
+  } else {
+    return(zoo_diversity)
+  }
+
 }
 get_zoo_diversity(save_clean = T)
 

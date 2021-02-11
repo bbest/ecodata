@@ -57,12 +57,6 @@ get_cold_pool_sf <- function(save_clean = F){
 #get_cold_pool_sf(save_clean = T, overwrite = TRUE)
 usethis::use_data(cold_pool_sf, overwrite = TRUE)
 
-
-
-
-
-
-
 ## --------------------------------------------------------------------------------- ##
     ### Cold Pool time series
 get_cold_pool <- function(save_clean = F){
@@ -80,17 +74,18 @@ get_cold_pool <- function(save_clean = F){
     dplyr::mutate(EPU = c("MAB"))
 
 
-  if(save_clean){
-    usethis::use_data(cold_pool, overwrite = T)
-  } else {
-    return(cold_pool)
-  }
   # metadata ----
   attr(cold_pool, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/cold-pool-index.html"
   attr(cold_pool, "data_files")   <- list(
     cold_pool_nc = cold_pool_nc)
   attr(cold_pool, "data_steward") <- c(
     "Zhuomin Chen <zchen@whoi.edu>")
+
+  if(save_clean){
+    usethis::use_data(cold_pool, overwrite = T)
+  } else {
+    return(cold_pool)
+  }
 
 }
 get_cold_pool(save_clean = T)

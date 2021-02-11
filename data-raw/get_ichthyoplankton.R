@@ -18,18 +18,20 @@ get_ichthyo_diversity <- function(save_clean = F){
                   EPU = Region) %>%
     dplyr::mutate(Value  = as.numeric(Value))
 
-  if (save_clean){
-    usethis::use_data(ichthyo_diversity, overwrite = T)
-  } else {
-    return(ichthyo_diversity)
-  }
-
   # metadata ----
   attr(ichthyo_diversity, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/ichthyoplankton-diversity.html"
   attr(ichthyo_diversity, "data_files")   <- list(
     ichthyo_diversity_xlsx = ichthyo_diversity_xlsx)
   attr(ichthyo_diversity, "data_steward") <- c(
     "Harvey Walsh <harvey.walsh@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(ichthyo_diversity, overwrite = T)
+  } else {
+    return(ichthyo_diversity)
+  }
+
+
 }
 get_ichthyo_diversity(save_clean = T)
 

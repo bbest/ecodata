@@ -35,11 +35,6 @@ get_eng_rel <- function(save_clean = F){
                   ComRel = as.numeric(ComRel))
   colnames(engagement) = col.names
 
-  if (save_clean){
-    usethis::use_data(engagement, overwrite = T)
-  } else {
-    return(engagement)
-  }
   # metadata ----
   attr(engagement, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/community-engagement.html"
   attr(engagement, "data_files")   <- list(
@@ -47,6 +42,13 @@ get_eng_rel <- function(save_clean = F){
   attr(engagement, "data_steward") <- c(
     "Lisa Colburn <lisa.colburn@noaa.gov>",
     "Changhua Weng <changhua.weng@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(engagement, overwrite = T)
+  } else {
+    return(engagement)
+  }
+
 }
 get_eng_rel(save_clean = T)
 

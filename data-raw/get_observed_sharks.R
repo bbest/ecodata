@@ -14,16 +14,18 @@ get_observed_sharks <- function(save_clean = F){
                   Var = SHKGROUP,
                   Value = NSHARK_HAUL)
 
-  if (save_clean){
-    usethis::use_data(observed_sharks, overwrite = T)
-  } else {
-    return(observed_sharks)
-  }
   # metadata ----
   attr(observed_sharks, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc.html"
   attr(observed_sharks, "data_files")   <- list(
     observed_sharks_csv = observed_sharks_csv)
   attr(observed_sharks, "data_steward") <- c(
     "Debra Duarte  <debra.duarte@noaa.gov")
+
+  if (save_clean){
+    usethis::use_data(observed_sharks, overwrite = T)
+  } else {
+    return(observed_sharks)
+  }
+
 }
 get_observed_sharks(save_clean = T)

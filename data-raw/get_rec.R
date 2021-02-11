@@ -24,15 +24,17 @@ get_rec <- function(save_clean = F){
 
   recdat <- recdat %>% dplyr::filter(!is.na(EPU))
 
-  if (save_clean){
-    usethis::use_data(recdat, overwrite = T)
-  } else {
-    return(recdat)
-  }
   # metadata ----
   attr(recdat, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/recreational-fishing-indicators.html"
   attr(recdat, "data_files")   <- list()
   attr(recdat, "data_steward") <- c(
     "Geret DePiper <geret.depiper@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(recdat, overwrite = T)
+  } else {
+    return(recdat)
+  }
+
 }
 get_rec(save_clean = T)

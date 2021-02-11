@@ -31,11 +31,6 @@ get_stocks <- function(save_clean = F){
     dplyr::mutate(Units = "unitless") %>%
     dplyr::mutate(Value = replace(Value, which(Code == "N Windowpane" & Var == "F.Fmsy"), NA))
 
-  if (save_clean){
-    usethis::use_data(stock_status, overwrite = T)
-  } else {
-    return(stock_status)
-  }
   # metadata ----
   attr(stock_status, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/stockstatus.html"
   attr(stock_status, "data_files")   <- list(
@@ -43,5 +38,12 @@ get_stocks <- function(save_clean = F){
     stock_status_decoder_csv = stock_status_decoder_csv)
   attr(stock_status, "data_steward") <- c(
     "Sarah Gaichas <sarah.gaichas@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(stock_status, overwrite = T)
+  } else {
+    return(stock_status)
+  }
+
 }
 get_stocks(save_clean = T)

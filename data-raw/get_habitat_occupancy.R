@@ -18,16 +18,18 @@ get_hab_occupancy <- function(save_clean = F){
     dplyr::mutate(EPU = c("All"),
            Units = c("10^3km^2"))
 
-  if (save_clean){
-    usethis::use_data(habitat_occupancy, overwrite = T)
-  } else {
-    return(habitat_occupancy)
-  }
   # metadata ----
   attr(habitat_occupancy, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/hab-occu.html"
   attr(habitat_occupancy, "data_files")   <- list(
     habitat_occupancy_csv = habitat_occupancy_csv)
   attr(habitat_occupancy, "data_steward") <- c(
     "Kevin Friedland <kevin.friedland@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(habitat_occupancy, overwrite = T)
+  } else {
+    return(habitat_occupancy)
+  }
+
 }
 get_hab_occupancy(save_clean = T)

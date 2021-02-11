@@ -53,11 +53,7 @@ get_zoo_abun_anom <- function(save_clean = F){
 
   zoo_abund <- rbind(small, large) %>%
     dplyr::rename(EPU = Region)
-  if (save_clean){
-    usethis::use_data(zoo_abund, overwrite = T)
-  } else {
-    return(zoo_abund)
-  }
+
   # metadata ----
   attr(zoo_abund, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/zooabund.html"
   attr(zoo_abund, "data_files")   <- list(
@@ -66,6 +62,13 @@ get_zoo_abun_anom <- function(save_clean = F){
     "Harvey Walsh <harvey.walsh@noaa.gov>",
     "Mike Jones <michael.jones@noaa.gov>",
     "Ryan Morse <ryan.morse@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(zoo_abund, overwrite = T)
+  } else {
+    return(zoo_abund)
+  }
+
 }
 get_zoo_abun_anom(save_clean = T)
 

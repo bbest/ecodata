@@ -21,8 +21,8 @@ heatwave_anom_gridded_ltm_nc <- "sst.day.mean.ltm.1982-2010.nc"
 #These data are large files that are not included among ecodata source files. They are accessible
 #here: https://www.esrl.noaa.gov/psd/data/gridded/data.noaa.oisst.v2.highres.html
 # but are removed after use as they are too large to store on github
-sst.2019 <- rast_prep(stack(file.path(raw.dir, heatwave_anom_gridded_day_nc)))
-ltm <- rast_prep(stack(file.path(raw.dir, heatwave_anom_gridded_ltm_nc)))
+#sst.2019 <- rast_prep(stack(file.path(raw.dir, heatwave_anom_gridded_day_nc)))
+#ltm <- rast_prep(stack(file.path(raw.dir, heatwave_anom_gridded_ltm_nc)))
 
 ## Use day of Max heatwave intensity.
 gb.ltm <- ltm[[227]] # Aug 23

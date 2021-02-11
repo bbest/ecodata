@@ -35,11 +35,6 @@ rec_hms<- d %>%
                                        `4` = "New England",
                                        `5` = "Mid-Atlantic"))
 
-if (save_clean){
-  usethis::use_data(rec_hms, overwrite = T)
-} else {
-  return(rec_hms)
-}
 # metadata ----
 attr(rec_hms, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/slopewater-proportions.html"
 attr(rec_hms, "data_files")   <- list(
@@ -47,6 +42,13 @@ attr(rec_hms, "data_files")   <- list(
   hms_cat = hms_cat)
 attr(rec_hms, "data_steward") <- c(
   "Kimberly Bastille <kimberly.bastille@noaa.gov>")
+
+if (save_clean){
+  usethis::use_data(rec_hms, overwrite = T)
+} else {
+  return(rec_hms)
+}
+
 }
 get_rec_hms(save_clean = T)
 

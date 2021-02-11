@@ -15,16 +15,18 @@ get_blue_runner <- function(save_clean = F){
    blue_runner<- blue.soe %>%
      dplyr::rename(EPU =  Region)
 
+   # metadata ----
+   attr(blue_runner, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/chl-pp.html"
+   attr(blue_runner, "data_files")   <- list(
+      blue_runner_RData = blue_runner_RData)
+   attr(blue_runner, "data_steward") <- c(
+      "Sean Lucey <sean.lucey@noaa.gov>")
+
   if (save_clean){
     usethis::use_data(blue_runner, overwrite = T)
   } else {
     return(blue_runner)
   }
-   # metadata ----
-   attr(blue_runner, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/chl-pp.html"
-   attr(blue_runner, "data_files")   <- list(
-     blue_runner_RData = blue_runner_RData)
-   attr(blue_runner, "data_steward") <- c(
-     "Sean Lucey <sean.lucey@noaa.gov>")
+
 }
 get_blue_runner(save_clean = T)

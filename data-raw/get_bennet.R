@@ -12,11 +12,6 @@ get_bennet <- function(save_clean = F){
   bennet <- bennet %>%
     dplyr::rename(EPU = Region)
 
-  if (save_clean){
-    usethis::use_data(bennet, overwrite = T)
-  } else {
-    return(bennet)
-  }
   # metadata ----
   attr(bennet, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/bennet-indicator.html"
   attr(bennet, "data_files")   <- list(
@@ -24,5 +19,11 @@ get_bennet <- function(save_clean = F){
   attr(bennet, "data_steward") <- c(
     "John Walden <john.walden@noaa.gov>",
     "Geret DePiper <geret.depiper@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(bennet, overwrite = T)
+  } else {
+    return(bennet)
+  }
 }
 get_bennet(save_clean = T)

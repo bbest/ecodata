@@ -48,17 +48,20 @@ get_ne_inshore_survey <- function(save_clean = F){
                   -Low_CI_Weight, -High_CI_Weight, -Survey ) %>%
     dplyr::mutate(Season = dplyr::recode(Season, "FL"= "Fall","SP" = "Spring" )) %>%
     tidyr::unite(.,Var, c("Var","Season"),sep = " ")
-  if (save_clean){
-    usethis::use_data(ne_inshore_survey, overwrite = T)
-  } else {
-    return(list(ne_inshore_survey))
-  }
+
   # metadata ----
   attr(ne_inshore_survey, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/inshoresurvdat.html"
   attr(ne_inshore_survey, "data_files")   <- list(
     ne_inshore_survey_csv = ne_inshore_survey_csv)
   attr(ne_inshore_survey, "data_steward") <- c(
     "Rebecca Peters <rebecca.j.peters@maine.gov>")
+
+  if (save_clean){
+    usethis::use_data(ne_inshore_survey, overwrite = T)
+  } else {
+    return(list(ne_inshore_survey))
+  }
+
 }
 
 

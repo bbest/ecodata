@@ -17,17 +17,19 @@ get_gsi <- function(save_clean = F){
            Units = "latitude anomaly",
            EPU = "All")
 
-  if (save_clean){
-    usethis::use_data(gsi, overwrite = T)
-  } else {
-    return(gsi)
-  }
   # metadata ----
   attr(gsi, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/gulf-stream-index.html"
   attr(gsi, "data_files")   <- list(
     gsi_csv = gsi_csv)
   attr(gsi, "data_steward") <- c(
     "Vincent Saba <vincent.saba@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(gsi, overwrite = T)
+  } else {
+    return(gsi)
+  }
+
 }
 get_gsi(save_clean = T)
 
@@ -41,17 +43,18 @@ get_gsi_old <- function(save_clean = F){
     dplyr::mutate(Var = "gulf stream index",
                   Units = "latitude anomaly",
                   EPU = "All")
+  # metadata ----
+  attr(gsi_old, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/gulf-stream-index.html"
+  attr(gsi_old, "data_files")   <- list(
+    gsi_csv = gsi_csv)
+  attr(gsi_old, "data_steward") <- c(
+    "Vincent Saba <vincent.saba@noaa.gov>")
 
   if (save_clean){
     usethis::use_data(gsi_old, overwrite = T)
   } else {
     return(gsi_old)
   }
-  # metadata ----
-  # attr(gsi_old, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/gulf-stream-index.html"
-  # attr(gsi_old, "data_files")   <- list(
-  #   gsi_csv = gsi_csv)
-  # attr(gsi_old, "data_steward") <- c(
-  #   "Vincent Saba <vincent.saba@noaa.gov>")
+
 }
 get_gsi_old(save_clean = T)

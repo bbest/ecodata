@@ -28,17 +28,19 @@ get_harborporpoise <- function(save_clean = F){
     mutate(Units = "N") %>%
     as.data.frame()
 
-  if (save_clean){
-    usethis::use_data(harborporpoise, overwrite = TRUE)
-  } else {
-    return(harborporpoise)
-  }
   # metadata ----
   attr(harborporpoise, "tech-doc_url") <- "https://noaa-edab.github.io/tech-doc/harbor-porpoise-bycatch.html"
   attr(harborporpoise, "data_files")   <- list(
     harborporpoise_csv = harborporpoise_csv)
   attr(harborporpoise, "data_steward") <- c(
     "Chris Orphanides <chris.orphanides@noaa.gov>")
+
+  if (save_clean){
+    usethis::use_data(harborporpoise, overwrite = TRUE)
+  } else {
+    return(harborporpoise)
+  }
+
 }
 get_harborporpoise(save_clean = T)
 
